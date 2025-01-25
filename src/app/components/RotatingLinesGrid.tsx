@@ -6,11 +6,26 @@ import { motion } from "framer-motion"
 
 const RotatingLinesGrid: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
   const containerRef = useRef<HTMLDivElement>(null)
 
   const gridSize = 20
   const lineWidth = 25
   const lineHeight = 2
+
+  useEffect(() => {
+    const updateDimensions = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight
+      })
+    }
+    
+    updateDimensions()
+    window.addEventListener('resize', updateDimensions)
+    
+    return () => window.removeEventListener('resize', updateDimensions)
+  }, [])
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -36,7 +51,7 @@ const RotatingLinesGrid: React.FC = () => {
   }
 
   const getColor = (distance: number) => {
-    const maxDistance = Math.sqrt(window.innerWidth ** 2 + window.innerHeight ** 2)
+    const maxDistance = Math.sqrt(dimensions.width ** 2 + dimensions.height ** 2)
     const intensity = Math.max(0, 1 - distance / (maxDistance * 0.3))
     const color = Math.round(60 + 215 * intensity)
     return `rgb(${color}, ${color}, ${color})`
@@ -50,11 +65,11 @@ const RotatingLinesGrid: React.FC = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      {Array.from({ length: gridSize * gridSize }).map((_, index) => {
+      {dimensions.width > 0 && dimensions.height > 0 && Array.from({ length: gridSize * gridSize }).map((_, index) => {
         const row = Math.floor(index / gridSize)
         const col = index % gridSize
-        const lineX = (col / gridSize) * window.innerWidth
-        const lineY = (row / gridSize) * window.innerHeight
+        const lineX = (col / gridSize) * dimensions.width
+        const lineY = (row / gridSize) * dimensions.height
         const { angle, distance } = calculateRotationAndColor(lineX, lineY)
 
         return (
@@ -85,4 +100,3 @@ const RotatingLinesGrid: React.FC = () => {
 }
 
 export default RotatingLinesGrid
-

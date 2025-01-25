@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useRef, useState } from "react"
+import { useRef, useState, useEffect } from "react"
 import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import { OrbitControls } from "@react-three/drei"
 import * as THREE from "three"
@@ -33,11 +33,31 @@ const AbstractShape: React.FC<{ mouse: THREE.Vector2 }> = ({ mouse }) => {
 
 const InteractiveScene: React.FC = () => {
   const [mouse, setMouse] = useState(new THREE.Vector2())
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
+
+  useEffect(() => {
+    const updateDimensions = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight
+      })
+    }
+    
+    updateDimensions()
+    window.addEventListener('resize', updateDimensions)
+    
+    return () => window.removeEventListener('resize', updateDimensions)
+  }, [])
 
   const handleMouseMove = (event: React.MouseEvent) => {
-    setMouse(
-      new THREE.Vector2((event.clientX / window.innerWidth) * 2 - 1, -(event.clientY / window.innerHeight) * 2 + 1),
-    )
+    if (dimensions.width && dimensions.height) {
+      setMouse(
+        new THREE.Vector2(
+          (event.clientX / dimensions.width) * 2 - 1,
+          -(event.clientY / dimensions.height) * 2 + 1
+        )
+      )
+    }
   }
 
   return (
@@ -53,4 +73,3 @@ const InteractiveScene: React.FC = () => {
 }
 
 export default InteractiveScene
-
