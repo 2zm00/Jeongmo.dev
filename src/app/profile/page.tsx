@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaDiscord, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaGithub, FaDiscord, FaEnvelope, FaPhone, FaMapMarkerAlt, FaBirthdayCake } from 'react-icons/fa';
 import { 
   SiPython, 
   SiJavascript, 
@@ -65,18 +65,22 @@ const ProfilePage: React.FC = () => {
             <div className="flex flex-col space-y-2">
               <div className="flex items-center space-x-2">
                 <FaEnvelope className="text-cyan-400" />
-                <a href="mailto:ljm@naver.com" className="text-gray-300 hover:text-cyan-400">ljm@naver.com</a>
+                <a href="mailto:ljm@naver.com" className="text-gray-300 hover:text-cyan-400">ljm010301@naver.com</a>
               </div>
               <div className="flex items-center space-x-2">
                 <FaPhone className="text-cyan-400" />
                 <span className="text-gray-300">+82 10-1234-1234</span>
               </div>
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <FaGithub className="text-cyan-400" size={20} />
                 <a href="https://github.com/2zm00" className="text-gray-300 hover:text-cyan-400">
-                  <FaGithub size={24} />
+                  2zm00
                 </a>
+              </div>
+              <div className="flex items-center space-x-2">
+                <FaDiscord className="text-cyan-400" size={20} />
                 <a href="https://discordapp.com/users/397246059228823572" className="text-gray-300 hover:text-cyan-400">
-                  <FaDiscord size={24} />
+                  정모#9407
                 </a>
               </div>
             </div>
@@ -85,17 +89,20 @@ const ProfilePage: React.FC = () => {
           <section className="mb-6">
             <h2 className="text-2xl font-semibold mb-4 text-cyan-400">Personal Info</h2>
             <div className="text-gray-300 space-y-2">
-              <p>Birth: 2000년 01월 03일</p>
               <div className="flex items-center space-x-2">
                 <FaMapMarkerAlt className="text-cyan-400" />
-                <p>대한민국, 서울</p>
+                <p>Republic of Korea, Seoul</p>
+              </div>
+              <div className="flex items-center space-x-2">
+              <FaBirthdayCake className='text-cyan-400' />
+              <p>2000. 01. 03.</p>
               </div>
             </div>
           </section>
 
-          <h3 className="text-xl font-semibold mb-2 text-cyan-400">Skills</h3>
+          <h3 className="text-2xl font-semibold mb-2 text-cyan-400">Skills</h3>
           <ul className="list-disc list-inside text-gray-300 mb-6">
-            <li>Frontend Development (React, Next.js, Three.js)</li>
+            <li>Frontend Development (React, Next.js)</li>
             <li>Backend Development (Django, FastAPI, Node.js)</li>
             <li>DevOps & Cloud (AWS, Docker, Linux, Portainer)</li>
             <li>Audio Programming (Web Audio API, Tone.js)</li>
@@ -108,42 +115,58 @@ const ProfilePage: React.FC = () => {
           <section className="mb-6">
             <h2 className="text-2xl font-semibold mb-4 text-cyan-400">Education</h2>
             <div className="text-gray-300">
-              <p>강원대학교 작업치료학과 졸업</p>
-              <p>평균학점: 4+ / 4.5</p>
-              <p>토익: 880+ (2022)</p>
+              <p>The Department of Occupational Therapy, KNU.</p>
+              <p>GPA: 4+/4.5 </p>
+              <p>TOEIC: 880+ (2022) </p>
             </div>
           </section>
 
-          <h3 className="text-xl font-semibold mb-2 text-cyan-400">
+          <h3 className="text-2xl font-semibold mb-2 text-cyan-400">
             Experience
           </h3>
           <div className="mb-4">
             <h4 className="text-lg font-semibold text-white">
-              Senior Web Developer at CyberSound Inc.
+            Developer in Training
             </h4>
-            <p className="text-gray-400">2020 - Present</p>
+            <p className="text-gray-400">2024 - Present</p>
             <p className="text-gray-300">
-              Leading the development of innovative music-based web applications
-              and interactive audio experiences.
+              Self-studying programming and full-stack development, focusing on web development technologies.
             </p>
           </div>
           <div className="mb-6">
             <h4 className="text-lg font-semibold text-white">
-              Freelance Audio-Visual Developer
+              Backend Developer Bootcamp Participant
             </h4>
-            <p className="text-gray-400">2018 - 2020</p>
+            <p className="text-gray-400">2024 - 2025</p>
             <p className="text-gray-300">
-              Created custom web-based audio-visual installations for artists
-              and musicians.
+            Likelion Backend School Python Track. Led three project teams as Project Manager, demonstrating leadership and collaborative development skills.
+            </p>
+          </div>
+          <div className="mb-4">
+            <h4 className="text-lg font-semibold text-white">
+              Licensed Occupational Therapist
+            </h4>
+            <p className="text-gray-400">2023 - 2024</p>
+            <p className="text-gray-300">
+              Provided occupational therapy services at Recovery Rehabilitation Hospital. Gained comprehensive understanding of systematic workplace operations and organizational workflows.
+            </p>
+          </div>
+          <div className="mb-6">
+            <h4 className="text-lg font-semibold text-white">
+              Occupational Therapist Intern
+            </h4>
+            <p className="text-gray-400">2023</p>
+            <p className="text-gray-300">
+            Completed clinical internship and practical training at University Hospital. Developed strong interpersonal and communication skills through daily interactions with patients, families, and professionals.
             </p>
           </div>
 
           <section className="mb-6">
             <h2 className="text-2xl font-semibold mb-4 text-cyan-400">Certifications</h2>
             <ul className="list-disc list-inside text-gray-300">
-              <li>작업치료사 면허</li>
-              <li>심리상담사 자격증</li>
-              <li>SQLD</li>
+              <li>Korean National License for Occupational Therapist</li>
+              <li>Psychological Counselor Certificate</li>
+              <li>SQLDeveloper</li>
             </ul>
           </section>
 

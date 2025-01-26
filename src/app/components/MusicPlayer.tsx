@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { useState, useRef, useEffect } from "react"
+import { FaPause, FaPlay } from "react-icons/fa";
 import { motion } from "framer-motion"
 import WaveSurfer from "wavesurfer.js"
 
@@ -15,9 +16,9 @@ interface Track {
 const tracks: Track[] = [
   {
     id: 1,
-    title: "Black'!Antique",
+    title: "it's all me",
     artist: "2zm00",
-    audioUrl: "/audio/track4.mp3",
+    audioUrl: "/audio/track6.mp3",
   },
   {
     id: 2,
@@ -29,7 +30,7 @@ const tracks: Track[] = [
     id: 3,
     title: "Synth-",
     artist: "Jeongmo",
-    audioUrl: "/audio/track6.mp3",
+    audioUrl: "/audio/track4.mp3",
   },
   {
     id: 4,
@@ -45,9 +46,9 @@ const tracks: Track[] = [
   },
   {
     id: 6,
-    title: "all me",
+    title: "Black'!Antique",
     artist: "Jeongmo",
-    audioUrl: "/audio/track9.mp3",
+    audioUrl: "/audio/track3.mp3",
   },
 
 ]
@@ -133,9 +134,9 @@ const MusicPlayer: React.FC = () => {
             onClick={togglePlay}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="mr-2 md:mr-4 text-2xl md:text-3xl text-cyan-800"
+            className="mr-2 md:mr-4 text-2xl text-cyan-400 hover:text-cyan-300"
           >
-            {isPlaying ? "⏸️" : "▶️"}
+            {isPlaying ? <FaPause /> : <FaPlay />}
           </motion.button>
           <div className="truncate">
             <h3 className="text-base md:text-lg font-semibold truncate">{currentTrack.title}</h3>

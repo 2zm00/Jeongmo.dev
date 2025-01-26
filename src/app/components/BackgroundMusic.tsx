@@ -3,7 +3,9 @@
 import type React from "react"
 import { useEffect, useRef, useState } from "react"
 
-const backgroundTracks = ["/audio/track1.mp3", "/audio/track2.mp3", "/audio/track3.mp3", "/audio/track4.mp3", "/audio/track5.mp3", "/audio/track6.mp3", "/audio/track7.mp3", "/audio/track8.mp3", "/audio/track9.mp3",]
+const backgroundTracks = ["/audio/track4.mp3", "/audio/track2.mp3", "/audio/track3.mp3", "/audio/track1.mp3", "/audio/track5.mp3", "/audio/track6.mp3", "/audio/track7.mp3", "/audio/track8.mp3"
+  
+]
 
 const BackgroundMusic: React.FC = () => {
   const audioRef = useRef<HTMLAudioElement>(null)

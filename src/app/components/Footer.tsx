@@ -5,6 +5,8 @@ import { FaGithub, FaEnvelope, FaGlobe, FaDiscord } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <motion.footer
       className="bg-black bg-opacity-80 backdrop-blur-md text-white p-4 mt-8"
@@ -13,7 +15,7 @@ const Footer: React.FC = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto text-center">
-        <p>&copy; 2023 Jeongmo.dev. All rights reserved.</p>
+        <p>&copy; {currentYear} Jeongmo.dev.   All rights reserved.</p>
         <div className="mt-2 flex justify-center space-x-4">
           <motion.a
             href="https://github.com/2zm00"
