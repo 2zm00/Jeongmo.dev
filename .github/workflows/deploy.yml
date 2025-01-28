@@ -19,7 +19,7 @@ jobs:
         username: ${{ secrets.EC2_USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
         source: "."
-        target: "/home/ubuntu/workspaces"
+        target: "/home/ubuntu/workspaces/Jeongmo.dev"
 
     - name: Deploy to EC2
       uses: appleboy/ssh-action@master
@@ -28,6 +28,6 @@ jobs:
         username: ${{ secrets.EC2_USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          cd /home/ubuntu/workspaces
+          cd /home/ubuntu/workspaces/Jeongmo.dev
           docker-compose down
           docker-compose up -d --build
