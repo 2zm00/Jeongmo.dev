@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import HeroSection from "@/src/app/components/HeroSection"
 import PlaylistGrid from "@/src/app/components/PlaylistGrid"
 import MusicPlayer from "@/src/app/components/MusicPlayer"
+import ProjectPage from "@/src/app/projects/page"
 
 export default function Home() {
   const [showIntro, setShowIntro] = useState(true)
@@ -37,6 +38,7 @@ export default function Home() {
         )}
       </AnimatePresence>
       <HeroSection />
+      <ProjectPage />
       <PlaylistGrid />
       <MusicPlayer />
     </main>

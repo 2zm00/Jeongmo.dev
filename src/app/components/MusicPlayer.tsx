@@ -64,9 +64,9 @@ const MusicPlayer: React.FC = () => {
     if (waveformRef.current) {
       const ws = WaveSurfer.create({
         container: waveformRef.current,
-        waveColor: "violet",
-        progressColor: "purple",
-        cursorColor: "navy",
+        waveColor: "#3C4043",
+        progressColor: "#ffffff",
+        cursorColor: "#ffffff",
         barWidth: 3,
         barRadius: 3,
         cursorWidth: 1,
@@ -121,26 +121,27 @@ const MusicPlayer: React.FC = () => {
   }
 
   return (
+    <div className="fixed bottom-8 left-0 w-full flex justify-center items-center px-4 z-40"> 
     <motion.div
-      className="fixed bottom-0 left-0 w-full bg-gray-900 text-white p-2 md:p-4 z-40"
-      initial={{ y: 100 }}
-      animate={{ y: 0 }}
+      className="w-full max-w-[1200px] bg-black/80 backdrop-blur-md rounded-xl border border-white/10"
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
       transition={{ type: "spring", stiffness: 100, damping: 20 }}
     >
-      <div className="container mx-auto flex flex-col md:flex-row items-center gap-2 md:gap-4">
+      <div className="container mx-auto flex flex-col md:flex-row items-center gap-2 md:gap-4 p-2 px-6">
         {/* 트랙 정보 및 재생 버튼 */}
-        <div className="flex items-center w-full md:w-auto justify-between md:justify-start">
+        <div className="flex items-center w-full md:w-auto justify-between md:justify-start py-2">
           <motion.button
             onClick={togglePlay}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="mr-2 md:mr-4 text-2xl text-cyan-400 hover:text-cyan-300"
+            className="mr-2 md:mr-6 text-2xl text-white transition-colors"
           >
             {isPlaying ? <FaPause /> : <FaPlay />}
           </motion.button>
           <div className="truncate">
             <h3 className="text-base md:text-lg font-semibold truncate">{currentTrack.title}</h3>
-            <p className="text-xs md:text-sm text-cyan-400 truncate">{currentTrack.artist}</p>
+            <p className="text-xs md:text-sm text-white/60 truncate">{currentTrack.artist}</p>
           </div>
         </div>
 
@@ -148,7 +149,7 @@ const MusicPlayer: React.FC = () => {
         <div className="flex-1 w-full md:mx-4 h-16 md:h-20" ref={waveformRef}></div>
 
         {/* 컨트롤 */}
-        <div className="flex items-center gap-2 w-full md:w-auto justify-between md:justify-end">
+        <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end py-2">
           <input
             type="range"
             min="0"
@@ -156,7 +157,7 @@ const MusicPlayer: React.FC = () => {
             step="0.01"
             value={volume}
             onChange={handleVolumeChange}
-            className="w-20 md:w-24"
+            className="w-20 md:w-24 white "
           />
           <select
             value={currentTrack.id}
@@ -164,7 +165,7 @@ const MusicPlayer: React.FC = () => {
               const track = tracks.find((t) => t.id === Number(e.target.value))
               if (track) handleTrackChange(track)
             }}
-            className="bg-gray-800 text-white p-1 md:p-2 rounded text-sm md:text-base"
+            className="bg-black/80 text-white p-2 rounded-lg text-sm md:text-base border border-white/20 transition-colors"
           >
             {tracks.map((track) => (
               <option key={track.id} value={track.id}>
@@ -175,6 +176,7 @@ const MusicPlayer: React.FC = () => {
         </div>
       </div>
     </motion.div>
+    </div>
   )
 }
 
