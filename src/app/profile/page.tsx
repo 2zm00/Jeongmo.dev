@@ -19,6 +19,16 @@ import {
   SiFastapi,
   SiMinio,
   SiPortainer,
+  SiStreamlit,
+  SiPandas,
+  SiNumpy,
+  SiSelenium,
+  SiTensorflow,
+  SiPytorch,
+  SiScikitlearn,
+  SiOpencv,
+  SiPlotly,
+  SiAmazon,
 } from 'react-icons/si';
 
 
@@ -105,11 +115,8 @@ const ProfilePage: React.FC = () => {
             <li>Frontend Development (React, Next.js)</li>
             <li>Backend Development (Django, FastAPI, Node.js)</li>
             <li>DevOps & Cloud (AWS, Docker, Linux, Portainer)</li>
-            <li>Audio Programming (Web Audio API, Tone.js)</li>
-            <li>3D Graphics and Animations</li>
-            <li>UI/UX Design for Music Applications</li>
-            <li>Machine Learning for Music Generation</li>
-            <li>Object Storage Solutions (MinIO, AWS S3)</li>
+            <li>API Integration: LLM API, Payment Gateway Integration</li>
+            <li>Effective team collaboration and leadership experience</li>
           </ul>
 
           <section className="mb-6">
@@ -117,7 +124,7 @@ const ProfilePage: React.FC = () => {
             <div className="text-gray-300">
               <p>The Department of Occupational Therapy, KNU.</p>
               <p>GPA: 4+/4.5 </p>
-              <p>TOEIC: 880+ (2022) </p>
+              <p>TOEIC: 800+ (2022) </p>
             </div>
           </section>
 
@@ -144,11 +151,13 @@ const ProfilePage: React.FC = () => {
           </div>
           <div className="mb-4">
             <h4 className="text-lg font-semibold text-white">
-              Licensed Occupational Therapist
+            Clinical Occupational Therapist
             </h4>
             <p className="text-gray-400">2023 - 2024</p>
             <p className="text-gray-300">
-              Provided occupational therapy services at Recovery Rehabilitation Hospital. Gained comprehensive understanding of systematic workplace operations and organizational workflows.
+            Coordinated care between medical teams, patients, and caregivers.
+            Developed patient trust through cross-generational communication strategies.
+            Conducted real-time problem solving for treatment plan optimization.
             </p>
           </div>
           <div className="mb-6">
@@ -164,9 +173,9 @@ const ProfilePage: React.FC = () => {
           <section className="mb-6">
             <h2 className="text-2xl font-semibold mb-4 text-cyan-400">Certifications</h2>
             <ul className="list-disc list-inside text-gray-300">
-              <li>Korean National License for Occupational Therapist</li>
-              <li>Psychological Counselor Certificate</li>
-              <li>SQLDeveloper</li>
+              <li>Occupational Therapist (License 25400)</li>
+              <li>Psychological Counselor Level 1 (2023-25-A75-0487)</li>
+              <li>SQL Developer (SQLD-054000856)</li>
             </ul>
           </section>
 
@@ -190,13 +199,27 @@ const ProfilePage: React.FC = () => {
                   <SiDjango size={24} className="text-gray-300 hover:text-cyan-400" />
                   <SiFastapi size={24} className="text-gray-300 hover:text-cyan-400" />
                   <SiTailwindcss size={24} className="text-gray-300 hover:text-cyan-400" />
+                  <SiStreamlit size={24} className="text-gray-300 hover:text-cyan-400" />
                 </div>
               </div>
-
+              <div>
+                <h3 className="text-lg text-gray-400 mb-2">Data Science & ML</h3>
+                <div className="flex flex-wrap gap-4">
+                  <SiPandas size={24} className="text-gray-300 hover:text-cyan-400" />
+                  <SiNumpy size={24} className="text-gray-300 hover:text-cyan-400"/>
+                  <SiSelenium size={24} className="text-gray-300 hover:text-cyan-400" />
+                  <SiTensorflow size={24} className="text-gray-300 hover:text-cyan-400"  />
+                  <SiPytorch size={24} className="text-gray-300 hover:text-cyan-400"  />
+                  <SiScikitlearn size={24} className="text-gray-300 hover:text-cyan-400"  />
+                  <SiOpencv size={24} className="text-gray-300 hover:text-cyan-400"  />
+                  <SiPlotly size={24} className="text-gray-300 hover:text-cyan-400" />
+                </div>
+              </div>
               <div>
                 <h3 className="text-lg text-gray-400 mb-2">DevOps & Cloud</h3>
                 <div className="flex flex-wrap gap-4">
                   <SiDocker size={24} className="text-gray-300 hover:text-cyan-400" />
+                  <SiAmazon size={24} className="text-gray-300 hover:text-cyan-400" />
                   <SiLinux size={24} className="text-gray-300 hover:text-cyan-400" />
                   <SiPortainer size={24} className="text-gray-300 hover:text-cyan-400" />
                   <SiMinio size={24} className="text-gray-300 hover:text-cyan-400" />
