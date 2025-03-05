@@ -12,7 +12,7 @@ const notoSansKR = Noto_Sans_KR({
 })
 
 export const metadata: Metadata = {
-  title: "Jeongmo.dev - Cyberpunk Portfolio",
+  title: "Jeongmo.dev",
   description: "A futuristic portfolio showcasing interactive components and music",
 }
 

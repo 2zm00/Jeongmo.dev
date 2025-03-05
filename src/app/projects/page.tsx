@@ -10,7 +10,7 @@ interface Project {
   description: string;
   imageUrl: string;
 }
-
+ 
 const projects: Project[] = [
   {
     id: 'project1',

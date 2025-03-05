@@ -29,6 +29,15 @@ import {
   SiOpencv,
   SiPlotly,
   SiAmazon,
+  SiKubernetes,
+  SiUbuntu,
+  SiNginx,
+  SiAmazons3,
+  SiRedis,
+  SiMediapipe,
+  SiGithub,
+  SiNotion,
+  SiSlack,
 } from 'react-icons/si';
 
 
@@ -63,11 +72,10 @@ const ProfilePage: React.FC = () => {
             About Me
           </h2>
           <p className="text-gray-300 mb-6">
-            Hi, I'm Jeongmo, a passionate web developer and music enthusiast. I
-            specialize in creating immersive digital experiences that blend
-            cutting-edge web technologies with innovative audio-visual elements.
-            My goal is to push the boundaries of what's possible in web-based
-            music applications and interactive art.
+          Hello! I'm Jeongmo Lee, a passionate developer.
+          I approach my work with sincerity and believe that genuine dedication leads to the constant introduction of new ideas, ultimately creating better experiences.
+          When collaborating, I value the power of teamwork—moving forward together rather than rushing alone. I firmly believe that working as a team allows us to go farther and achieve greater things.
+          Every experience offers something to learn. By actively engaging, experimenting, and creating, I strive to grow into a better and more advanced developer every day.
           </p>
 
           <section className="mb-6">
@@ -75,11 +83,11 @@ const ProfilePage: React.FC = () => {
             <div className="flex flex-col space-y-2">
               <div className="flex items-center space-x-2">
                 <FaEnvelope className="text-cyan-400" />
-                <a href="mailto:ljm@naver.com" className="text-gray-300 hover:text-cyan-400">ljm010301@naver.com</a>
+                <a href="mailto:dwa010301@gmail.com" className="text-gray-300 hover:text-cyan-400">dwa010301@gmail.com</a>
               </div>
               <div className="flex items-center space-x-2">
                 <FaPhone className="text-cyan-400" />
-                <span className="text-gray-300">+82 10-1234-1234</span>
+                <span className="text-gray-300">+82 10-9999-9999</span>
               </div>
               <div className="flex items-center space-x-2">
                 <FaGithub className="text-cyan-400" size={20} />
@@ -116,7 +124,7 @@ const ProfilePage: React.FC = () => {
             <li>Backend Development (Django, FastAPI, Node.js)</li>
             <li>DevOps & Cloud (AWS, Docker, Linux, Portainer)</li>
             <li>API Integration: LLM API, Payment Gateway Integration</li>
-            <li>Effective team collaboration and leadership experience</li>
+            <li>Effective team collaboration and Team lead experiences</li>
           </ul>
 
           <section className="mb-6">
@@ -203,24 +211,15 @@ const ProfilePage: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg text-gray-400 mb-2">Data Science & ML</h3>
-                <div className="flex flex-wrap gap-4">
-                  <SiPandas size={24} className="text-gray-300 hover:text-cyan-400" />
-                  <SiNumpy size={24} className="text-gray-300 hover:text-cyan-400"/>
-                  <SiSelenium size={24} className="text-gray-300 hover:text-cyan-400" />
-                  <SiTensorflow size={24} className="text-gray-300 hover:text-cyan-400"  />
-                  <SiPytorch size={24} className="text-gray-300 hover:text-cyan-400"  />
-                  <SiScikitlearn size={24} className="text-gray-300 hover:text-cyan-400"  />
-                  <SiOpencv size={24} className="text-gray-300 hover:text-cyan-400"  />
-                  <SiPlotly size={24} className="text-gray-300 hover:text-cyan-400" />
-                </div>
-              </div>
-              <div>
                 <h3 className="text-lg text-gray-400 mb-2">DevOps & Cloud</h3>
                 <div className="flex flex-wrap gap-4">
                   <SiDocker size={24} className="text-gray-300 hover:text-cyan-400" />
+                  <SiKubernetes size={24} className="text-gray-300 hover:text-cyan-400" />
                   <SiAmazon size={24} className="text-gray-300 hover:text-cyan-400" />
                   <SiLinux size={24} className="text-gray-300 hover:text-cyan-400" />
+                  <SiUbuntu size={24} className="text-gray-300 hover:text-cyan-400" />
+                  <SiNginx size={24} className="text-gray-300 hover:text-cyan-400" />
+                  <SiAmazons3 size={24} className="text-gray-300 hover:text-cyan-400" />
                   <SiPortainer size={24} className="text-gray-300 hover:text-cyan-400" />
                   <SiMinio size={24} className="text-gray-300 hover:text-cyan-400" />
                 </div>
@@ -232,6 +231,31 @@ const ProfilePage: React.FC = () => {
                   <SiPostgresql size={24} className="text-gray-300 hover:text-cyan-400" />
                   <SiMongodb size={24} className="text-gray-300 hover:text-cyan-400" />
                   <SiMysql size={24} className="text-gray-300 hover:text-cyan-400" />
+                  <SiRedis size={24} className="text-gray-300 hover:text-cyan-400" />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-lg text-gray-400 mb-2">Data Science & Machine Learning</h3>
+                <div className="flex flex-wrap gap-4">
+                  <SiPandas size={24} className="text-gray-300 hover:text-cyan-400" />
+                  <SiNumpy size={24} className="text-gray-300 hover:text-cyan-400"/>
+                  <SiSelenium size={24} className="text-gray-300 hover:text-cyan-400" />
+                  <SiTensorflow size={24} className="text-gray-300 hover:text-cyan-400"  />
+                  <SiPytorch size={24} className="text-gray-300 hover:text-cyan-400"  />
+                  <SiScikitlearn size={24} className="text-gray-300 hover:text-cyan-400"  />
+                  <SiOpencv size={24} className="text-gray-300 hover:text-cyan-400"  />
+                  <SiPlotly size={24} className="text-gray-300 hover:text-cyan-400" />
+                  <SiMediapipe size={24} className="text-gray-300 hover:text-cyan-400" />
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="text-lg text-gray-400 mb-2">Other</h3>
+                <div className="flex space-x-4">
+                  <SiGithub size={24} className="text-gray-300 hover:text-cyan-400" />
+                  <SiNotion size={24} className="text-gray-300 hover:text-cyan-400" />
+                  <SiSlack size={24} className="text-gray-300 hover:text-cyan-400" />
+                  
                 </div>
               </div>
             </div>
